@@ -2,544 +2,458 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./App.css";
 
-import profile from "./img/profile.jpg";
-import architecture from "./img/architecture.png";
-import robot from "./img/robot.png";
-import gazebo from "./img/gazebo.jpg";
-import hardware from "./img/hardware.jpg";
+import profile from "./img/profile.png";
+import CoCow1 from "./img/CoCow1.png";
+import CoCow2 from "./img/CoCow2.png";
+import CoCow3 from "./img/CoCow3.png";
+import profile1 from "./img/profile1.jpg";
+import logosmh from "./img/logosmh.jpg";
+import smh5 from "./img/smh5.jpg";
+import sku1 from "./img/sku1.png";
+import smh2 from "./img/smh2.jpg";
+import sku2 from "./img/sku2.png";
+import sku3 from "./img/sku3.png";
+import fm1 from "./img/fm1.png";
+import fm2 from "./img/fm2.png";
+import fm3 from "./img/fm3.png";
+
+
+/* ICONS */
+
+import { FaCode, FaGlobe, FaMicrochip } from "react-icons/fa";
+import { 
+FaPython,
+FaJava,
+FaReact,
+FaGithub,
+FaFacebook,
+FaInstagram,
+FaLine
+} from "react-icons/fa";
 
 import {
-    SiRos,
-    SiRaspberrypi,
-    SiFlutter,
-    SiOpencv,
-    SiCplusplus,
-    SiPytorch,
-    SiTensorflow,
-    SiMongodb,
-    SiFirebase,
-    SiTailwindcss,
-    SiBootstrap,
-    SiNodedotjs,
-    SiEspressif,
-    SiArduino,
+SiRos,
+SiRaspberrypi,
+SiFlutter,
+SiOpencv,
+SiCplusplus,
+SiPytorch,
+SiTensorflow,
+SiMongodb,
+SiFirebase,
+SiTailwindcss,
+SiBootstrap,
+SiNodedotjs,
+SiEspressif,
+SiArduino
 } from "react-icons/si";
 
-import { FaPython, FaJava, FaReact } from "react-icons/fa";
 
 function App() {
 
-    const scroll = (id) => {
-        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-    };
-
-    return (
-
-        <
-        div className = "app" >
-
-        <
-        nav className = "navbar" >
-        <
-        div className = "logo" > ⚙ < /div>
-
-        <
-        div className = "menu" >
-        <
-        span onClick = {
-            () => scroll("about")
-        } > About < /span> <
-        span onClick = {
-            () => scroll("skills")
-        } > Skills < /span> <
-        span onClick = {
-            () => scroll("experience")
-        } > Experience < /span> <
-        span onClick = {
-            () => scroll("projects")
-        } > Projects < /span> <
-        span onClick = {
-            () => scroll("contact")
-        } > Contact < /span> < /
-        div > <
-        /nav>
-
-        { /* HERO */ }
-
-        <
-        section className = "hero" >
-
-        { /* Floating Tech Icons */ }
-
-        <
-        div className = "hero-bg-icons" >
-
-        <
-        SiRos / >
-        <
-        FaPython / >
-        <
-        SiPytorch / >
-        <
-        SiTensorflow / >
-        <
-        SiRaspberrypi / >
-        <
-        SiArduino / >
-        <
-        FaReact / >
-
-        <
-        /div>
-
-
-        <
-        div className = "hero-content" >
-
-        <
-        img src = { profile }
-        className = "profile"
-        alt = "profile" / >
-
-        <
-        motion.h1 initial = {
-            { opacity: 0, y: 40 } }
-        animate = {
-            { opacity: 1, y: 0 } }
-        transition = {
-            { duration: 1 } } >
-        Apirak Kaewpachum <
-        /motion.h1>
-
-        <
-        p className = "title" >
-        Autonomous Systems / Software Engineer <
-        /p>
-
-        <
-        p className = "hero-tags" >
-        ROS2• Robotics• AI• Embedded Systems <
-        /p>
-
-        <
-        /div>
-
-        <
-        div className = "wave" > < /div>
-
-        <
-        /section>
-
+  const scroll = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+  };
 
+  return (
 
-        { /* ABOUT */ }
-
-        <
-        motion.section id = "about"
-        className = "section"
-        initial = {
-            { opacity: 0, y: 80 }
-        }
-        whileInView = {
-            { opacity: 1, y: 0 }
-        }
-        transition = {
-            { duration: .7 }
-        } >
-
-        <
-        h2 > About Me < /h2>
-
-        <
-        p className = "about" >
-        Hi, I 'm Apirak Kaewpachum (Net), an Electronic Computer Technology
-        student passionate about robotics and autonomous systems.I enjoy building intelligent robotic platforms using ROS2, AI technologies,
-        and embedded systems. <
-        /p>
-
-        <
-        /motion.section>
-
-
-
-        { /* SKILLS */ }
-
-        <
-        motion.section id = "skills"
-        className = "section"
-        initial = {
-            { opacity: 0, y: 80 }
-        }
-        whileInView = {
-            { opacity: 1, y: 0 }
-        }
-        transition = {
-            { duration: .7 }
-        } >
-
-        <
-        h2 > Technical Skills < /h2>
-
-        <
-        div className = "skill-grid" >
-
-        { /* Programming */ }
-
-        <
-        div className = "skill-card" >
-
-        <
-        h3 > Programming < /h3>
-
-        <
-        div className = "skill-item" >
-        <
-        FaPython size = { 30 }
-        /> <
-        span > Python < /span> < /
-        div >
-
-        <
-        div className = "skill-item" >
-        <
-        SiCplusplus size = { 30 }
-        /> <
-        span > C / C++ < /span> < /
-        div >
-
-        <
-        div className = "skill-item" >
-        <
-        FaJava size = { 30 }
-        /> <
-        span > Java < /span> < /
-        div >
-
-        <
-        /div>
-
-
-        { /* Robotics */ }
-
-        <
-        div className = "skill-card" >
-
-        <
-        h3 > Robotics / AI < /h3>
-
-        <
-        div className = "skill-item" >
-        <
-        SiRos size = { 30 }
-        /> <
-        span > ROS2 Jazzy < /span> < /
-        div >
-
-        <
-        div className = "skill-item" >
-        <
-        SiOpencv size = { 30 }
-        /> <
-        span > OpenCV < /span> < /
-        div >
-
-        <
-        div className = "skill-item" >
-        <
-        SiPytorch size = { 30 }
-        /> <
-        span > PyTorch < /span> < /
-        div >
-
-        <
-        div className = "skill-item" >
-        <
-        SiTensorflow size = { 30 }
-        /> <
-        span > TensorFlow < /span> < /
-        div >
-
-        <
-        /div>
-
-
-        { /* Web */ }
-
-        <
-        div className = "skill-card" >
-
-        <
-        h3 > Web / Backend Tools < /h3>
-
-        <
-        div className = "skill-item" >
-        <
-        FaReact size = { 30 }
-        /> <
-        span > React < /span> < /
-        div >
-
-        <
-        div className = "skill-item" >
-        <
-        SiFlutter size = { 30 }
-        /> <
-        span > Flutter < /span> < /
-        div >
-
-        <
-        div className = "skill-item" >
-        <
-        SiMongodb size = { 30 }
-        /> <
-        span > MongoDB < /span> < /
-        div >
-
-        <
-        div className = "skill-item" >
-        <
-        SiFirebase size = { 30 }
-        /> <
-        span > Firebase < /span> < /
-        div >
-
-        <
-        div className = "skill-item" >
-        <
-        SiTailwindcss size = { 30 }
-        /> <
-        span > Tailwind < /span> < /
-        div >
-
-        <
-        div className = "skill-item" >
-        <
-        SiBootstrap size = { 30 }
-        /> <
-        span > Bootstrap 5 < /span> < /
-        div >
-
-        <
-        div className = "skill-item" >
-        <
-        SiNodedotjs size = { 30 }
-        /> <
-        span > Node.js < /span> < /
-        div >
-
-        <
-        /div>
-
-
-        { /* Embedded */ }
-
-        <
-        div className = "skill-card" >
-
-        <
-        h3 > Embedded < /h3>
-
-        <
-        div className = "skill-item" >
-        <
-        SiRaspberrypi size = { 30 }
-        /> <
-        span > Raspberry Pi 5 < /span> < /
-        div >
-
-        <
-        div className = "skill-item" >
-        <
-        SiEspressif size = { 30 }
-        /> <
-        span > ESP32 < /span> < /
-        div >
+<div className="app">
 
-        <
-        /div>
+{/* NAVBAR */}
 
-        <
-        /div>
+<nav className="navbar">
 
-        <
-        /motion.section>
+<div className="nav-container">
 
+<div className="logo">
+PORTFOLIO
+</div>
 
+<div className="menu">
 
-        { /* EXPERIENCE */ }
+<span onClick={()=>scroll("skills")}>ทักษะ</span>
+<span onClick={()=>scroll("experience")}>ประสบการณ์</span>
+<span onClick={()=>scroll("projects")}>ผลงาน/ผลงานส่วนตัว</span>
+<span onClick={()=>scroll("about")}>เกี่ยวกับฉัน</span>
 
-        <
-        section id = "experience"
-        className = "section" >
+</div>
 
-        <
-        h2 > Experience < /h2>
+<button
+className="contact-btn"
+onClick={()=>scroll("contact")}
+>
+ติดต่อ
+</button>
 
-        <
-        div className = "card" >
+</div>
 
-        <
-        h3 > Fullstack Developer Intern < /h3> <
-        p > Magic Software(Thailand) Corp., Ltd < /p>
+</nav>
 
-        <
-        ul >
-        <
-        li > Developed web applications using JavaScript < /li> <
-        li > Worked with Web Portal API Software AG < /li> <
-        li > Deployed services on Linux servers < /li> < /
-        ul >
 
-        <
-        /div>
+{/* HERO */}
 
-        <
-        /section>
+<section className="hero">
 
+<div className="hero-content">
 
+<img src={profile} className="profile" alt="profile"/>
 
-        { /* PROJECTS */ }
+<motion.h1
+className="hero-name"
+initial={{opacity:0,y:40}}
+animate={{opacity:1,y:0}}
+transition={{duration:1}}
+>
 
-        <
-        section id = "projects"
-        className = "section" >
-
-        <
-        h2 > Projects < /h2>
-
-        <
-        div className = "project-grid" >
+นาย จักรพรรดิ ชนะมี
 
-        <
-        div className = "card" >
+</motion.h1>
 
-        <
-        h3 > Self - Driving Autonomous Robot < /h3>
+<div className="title">
 
-        <
-        p >
-        Autonomous robot using ROS2 Jazzy on Raspberry Pi 5 with LiDAR SLAM and Navigation2. <
-        /p>
+<p>
+<strong>มหาวิทยาลัย</strong> เทคโนโลยีพระจอมเกล้าพระนครเหนือ
+</p>
 
-        <
-        /div>
+<p>
+<strong>คณะ</strong> วิทยาลัยเทคโนโลยีอุตสาหกรรม
+</p>
 
+<p>
+<strong>สาขา</strong> เทคโนโลยีอิเล็กทรอนิกส์ แขนง คอมพิวเตอร์
+</p>
 
-        <
-        div className = "card" >
+</div>
 
-        <
-        h3 > Smart Safe Box(ESP32) < /h3>
+</div>
 
-        <
-        p >
-        Embedded safe box system with LINE notification using ESP32. <
-        /p>
+<div className="hero-glow"></div>
 
-        <
-        /div>
+</section>
 
-        <
-        /div>
 
-        <
-        /section>
+{/* ABOUT */}
+{/* ABOUT PROFILE */}
 
+{/* ABOUT PROFILE */}
 
+<section className="about-profile">
 
-        { /* ARCHITECTURE */ }
+<div className="about-profile-container">
 
-        <
-        section className = "section" >
+<div className="about-profile-img">
+<img src={profile1} alt="profile1"/>
+</div>
 
-        <
-        h2 className = "big-title" >
-        Self - Driving System Architecture <
-        /h2>
+<div className="about-profile-text">
 
-        <
-        img src = { architecture }
-        alt = "architecture"
-        className = "architecture-img" /
-        >
+<h2 className="about-title">เกี่ยวกับฉัน</h2>
 
-        <
-        /section>
+<p>
+สวัสดีครับ ผมชื่อ จักรพรรดิ ชนะมี เป็นนักศึกษาสาขาวิชาเทคโนโลยีอิเล็กทรอนิกส์ แขนง คอมพิวเตอร์ ณ มหาวิทยาลัย เทคโนโลยีพระจอมเกล้าพระนครเหนือ
+ผมมีความสนใจในด้านการพัฒนาระบบอัตโนมัติ (Automatic system) และปัญญาประดิษฐ์ (AI) และมีความสนใจในการออกแบบหน้าเว็บและพัฒนาแอปพลิเคชันด้วย React และ Flutter
+การเรียนของผมเน้นไปที่การพัฒนาทักษะทางเทคนิคในด้านการเขียนโปรแกรม การทำงานแบบเป็นระบบ และการพัฒนาเว็บแอปพลิเคชัน
+ผมมีประสบการณ์ในการทำโปรเจกต์ที่เกี่ยวข้องกับระบบอัตโนมัติด้วยครับ
+</p>
 
+</div>
 
+</div>
 
-        { /* ROBOT GALLERY */ }
+<section id="skills" className="section">
 
-        <
-        section className = "section" >
+<h2 className="section-title">ทักษะ</h2>
 
-        <
-        h2 > Robot System < /h2>
+<div className="skills-container">
 
-        <
-        div className = "gallery" >
+  <div className="skill-card">
+    <div className="skill-icon">
+      <FaCode />
+    </div>
 
-        <
-        div className = "gallery-card" >
-        <
-        img src = { robot }
-        alt = "robot" / >
-        <
-        p > Autonomous Robot Platform < /p> < /
-        div >
+    <h3>Programming</h3>
 
-        <
-        div className = "gallery-card" >
-        <
-        img src = { gazebo }
-        alt = "gazebo" / >
-        <
-        p > Gazebo Simulation < /p> < /
-        div >
+    <p>
+      C, Java, HTML, CSS, PHP
+    </p>
+  </div>
 
-        <
-        div className = "gallery-card" >
-        <
-        img src = { hardware }
-        alt = "hardware" / >
-        <
-        p > Embedded Hardware < /p> < /
-        div >
 
-        <
-        /div>
+  <div className="skill-card">
+    <div className="skill-icon">
+      <FaGlobe />
+    </div>
 
-        <
-        /section>
+    <h3>Web / Backend</h3>
 
+    <p>
+      React, Flutter, MongoDB,
+      Firebase, Bootstrap, Node.js
+    </p>
+  </div>
 
 
-        { /* CONTACT */ }
+  <div className="skill-card">
+    <div className="skill-icon">
+      <FaMicrochip />
+    </div>
 
-        <
-        section id = "contact"
-        className = "section" >
+    <h3>Embedded System</h3>
 
-        <
-        h2 > Contact < /h2>
+    <p>
+      ESP32, Arduino
+    </p>
+  </div>
 
-        <
-        p > 📞095 - 604 - 3539 < /p> <
-        p > 📧netapirak @gmail.com < /p> <
-        p > 💻github.com / shidosaiga < /p>
+</div>
 
-        <
-        /section>
+</section>
 
 
+{/* EXPERIENCE */}
 
-        <
-        footer className = "footer" > ©2026 Apirak Kaewpachum <
-        /footer>
+<section id="experience" className="section">
 
-        <
-        /div>
-    );
+<h2 className="section-title">ประสบการณ์</h2>
+
+<div className="card">
+
+<h3>ฝึกงาน IT Support</h3>
+<p>โรงพยาบาลพระนั่งเกล้า</p>
+
+<ul>
+<li>พัฒนา website</li>
+<li>บำรุงรักษาอุปกรณ์คอมพิวเตอร์</li>
+<li>UX/UI Design</li>
+</ul>
+
+</div>
+</section>
+
+
+{/* PROJECTS */}
+
+<section id="projects" className="section">
+
+<h2 className="section-title">ผลงานโปรเจกต์</h2>
+
+<div className="about-profile-container">
+
+<div className="about-profile-text">
+
+<h3>SMART MEDICHUB</h3>
+
+<p>
+เป็นเครื่องจ่ายยาอัจฉริยะที่พัฒนาขึ้นเพื่อช่วยจัดการการรับประทานยาให้ตรงเวลา โดยใช้ ESP32 เป็นตัวควบคุมหลักของระบบ ผู้ใช้งานสามารถกำหนดเวลารับประทานยาได้ผ่าน เว็บแอปพลิเคชัน และเมื่อถึงเวลาที่กำหนด ระบบจะทำการ แจ้งเตือนและจ่ายยาอัตโนมัติ 
+เพื่อลดโอกาสการลืมรับประทานยา เหมาะสำหรับผู้สูงอายุหรือผู้ที่ต้องรับประทานยาตามเวลาอย่างสม่ำเสมอ
+</p>
+
+</div>
+
+<div className="project-img">
+<img src={logosmh} alt="logosmh"/>
+<img src={smh5} alt="smh5"/>
+<img src={smh2} alt="smh2"/>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="projects" className="section">
+
+<h2 className="section-title">ผลงานส่วนตัว</h2>
+
+<div className="about-profile-container">
+
+<div className="about-profile-text">
+
+<h3>CoCowMilk</h3>
+
+<p>
+เป็นการพัฒนาแอปพลิเคชันด้วย Flutter โดยแอปพลิเคชันนี้มีฟีเจอร์การสั่งซื้อและจัดการร้านขายนมสดออนไลน์ ผู้ใช้งานสามารถเลือกซื้อสินค้าต่าง ๆ เช่น นมสด ชาเขียว และอื่น ๆ ได้อย่างสะดวกสบายผ่านแอปพลิเคชันนี้
+แอปพลิเคชันนี้มีระบบการจัดการคำสั่งซื้อที่ช่วยให้ร้านค้าสามารถติดตามและจัดการคำสั่งซื้อได้อย่างมีประสิทธิภาพ นอกจากนี้ยังมีฟีเจอร์การชำระเงินออนไลน์ที่ช่วยให้ลูกค้าสามารถชำระเงินได้อย่างสะดวกและรวดเร็ว
+</p>
+
+</div>
+
+<div className="project-img">
+<img src={CoCow1} alt="CoCow1"/>
+<img src={CoCow2} alt="CoCow2"/>
+<img src={CoCow3} alt="CoCow3"/>
+</div>
+
+</div>
+
+
+
+</section>
+
+<section id="projects" className="section">
+
+<div className="about-profile-container">
+
+<div className="about-profile-text">
+
+<h3>sketchUp Pro</h3>
+
+<p>
+การออกแบบโมเดล 3 มิติ โดยใช้โปรแกรม SketchUp Pro เพื่อสร้างงานงานออกแบบต่าง ๆ เช่น อาคาร สถานที่ หรือวัตถุต่าง ๆ โดยใช้เครื่องมือและฟีเจอร์ต่าง ๆ ที่มีในโปรแกรมนี้ เพื่อสร้างโมเดลที่มีความละเอียดและสมจริง
+</p>
+
+</div>
+
+<div className="project-img sketchup-img">
+<img src={sku1} alt="sku1"/>
+<img src={sku2} alt="sku2"/>
+<img src={sku3} alt="sku3"/>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects" className="section">
+
+<div className="about-profile-container">
+
+<div className="about-profile-text">
+
+<h3>UX/UI Design</h3>
+
+<p>
+การออกแบบประสบการณ์ผู้ใช้ (UX) และการออกแบบส่วนติดต่อผู้ใช้ (UI) โดยเน้นการออกแบบที่ตอบสนองความต้องการของผู้ใช้และสร้างความพึงพอใจในการใช้งาน
+ผลงานการออกแบบเว็บไซต์และแอปพลิเคชันให้ผู้ใช้งานสามารถใช้งานได้อย่างง่ายดายและมีประสบการณ์ที่ดีในการใช้งาน
+</p>
+
+</div>
+
+<div className="project-img sketchup-img">
+
+<img src={fm3} alt="fm3"/>
+<img src={fm1} alt="fm1"/>
+<img src={fm2} alt="fm2"/>
+
+</div>
+
+</div>
+
+</section>
+
+</section>
+
+<section id="about" className="section">
+
+<h2 className="section-title">CONTACT</h2>
+
+<div className="about-grid">
+
+<div className="about-card">
+
+<div className="about-icon">
+<FaFacebook/>
+</div>
+
+<h3>FACEBOOK</h3>
+
+<p>
+ติดตามกิจกรรม และการเรียนของผมผ่าน Facebook
+</p>
+
+<a href="https://www.facebook.com/teamz.chakkapat/" target="_blank" rel="noreferrer">
+ดูโปรไฟล์ ↗
+</a>
+
+</div>
+
+
+<div className="about-card">
+
+<div className="about-icon">
+<FaInstagram/>
+</div>
+
+<h3>INSTAGRAM</h3>
+
+<p>
+รวมภาพผลงาน การทำโปรเจกต์ และไลฟ์สไตล์
+</p>
+
+<a href="https://www.instagram.com/tcc_teamz/" target="_blank" rel="noreferrer">
+ดูโปรไฟล์ ↗
+</a>
+
+</div>
+
+
+<div className="about-card">
+
+<div className="about-icon">
+<FaLine/>
+</div>
+
+<h3>LINE</h3>
+
+<p>
+ติดต่อผมผ่าน LINE
+เพื่อพูดคุยเรื่องงานหรือโปรเจกต์
+</p>
+
+<a href="https://line.me/ti/p/IDLINEของคุณ" target="_blank">
+เพิ่มเพื่อน ↗
+</a>
+
+</div>
+
+
+<div className="about-card">
+
+<div className="about-icon">
+<FaGithub/>
+</div>
+
+<h3>GITHUB</h3>
+
+<p>
+รวมโปรเจกต์ และซอร์สโค้ดที่ผมพัฒนา
+</p>
+
+<a href="https://github.com/ChakkaphatChanamee" target="_blank" rel="noreferrer">
+ดูโปรไฟล์ ↗
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+{/* SKILLS */}
+
+
+
+{/* CONTACT */}
+
+<section id="contact" className="section">
+
+<h2 className="section-title">ติดต่อ</h2>
+
+<p>📞 084-323-1677</p>
+<p>📧 teamzchakkaphat04@gmail.com</p>
+
+</section>
+
+
+<footer className="footer">
+©2026 Chakkaphat Chanamee
+</footer>
+
+</div>
+
+  );
 }
 
 export default App;
