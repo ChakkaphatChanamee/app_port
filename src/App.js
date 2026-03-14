@@ -31,23 +31,6 @@ FaInstagram,
 FaLine
 } from "react-icons/fa";
 
-import {
-SiRos,
-SiRaspberrypi,
-SiFlutter,
-SiOpencv,
-SiCplusplus,
-SiPytorch,
-SiTensorflow,
-SiMongodb,
-SiFirebase,
-SiTailwindcss,
-SiBootstrap,
-SiNodedotjs,
-SiEspressif,
-SiArduino
-} from "react-icons/si";
-
 
 function App() {
 
@@ -262,7 +245,7 @@ transition={{duration:1}}
 </section>
 
 
-<section id="projects" className="section">
+<section id="projects2" className="section">
 
 <h2 className="section-title">ผลงานส่วนตัว</h2>
 
@@ -291,7 +274,7 @@ transition={{duration:1}}
 
 </section>
 
-<section id="projects" className="section">
+<section id="projects3" className="section">
 
 <div className="about-profile-container">
 
@@ -315,7 +298,7 @@ transition={{duration:1}}
 
 </section>
 
-<section id="projects" className="section">
+<section id="projects4" className="section">
 
 <div className="about-profile-container">
 
@@ -401,7 +384,7 @@ transition={{duration:1}}
 เพื่อพูดคุยเรื่องงานหรือโปรเจกต์
 </p>
 
-<a href="https://line.me/ti/p/IDLINEของคุณ" target="_blank">
+<a href="https://line.me/ti/p/xd6yD23-vI" target="_blank" rel="noreferrer">
 เพิ่มเพื่อน ↗
 </a>
 
