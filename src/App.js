@@ -22,9 +22,6 @@ import fm3 from "./img/fm3.png";
 
 import { FaCode, FaGlobe, FaMicrochip } from "react-icons/fa";
 import { 
-FaPython,
-FaJava,
-FaReact,
 FaGithub,
 FaFacebook,
 FaInstagram,
